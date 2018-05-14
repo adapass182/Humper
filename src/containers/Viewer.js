@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import Button from '../components/button'
 import { getDog, rateDog } from '../actions/rateDog'
 
 class Viewer extends PureComponent {
@@ -9,7 +8,7 @@ class Viewer extends PureComponent {
   }
 
   handleClick() {
-    this.props.rateDog(this.props.activePhoto.breed, this.type)
+    this.props.rateDog(this.props.activePhoto.breed, this.value)
     this.props.getDog()
   }
 
@@ -17,8 +16,12 @@ class Viewer extends PureComponent {
     return (
       <div>
         <img src={this.props.activePhoto.img} />
-        <Button type="like" onClick={this.handleClick.bind(this)}>+</Button>
-        <Button type="dislike" onClick={}>-</Button>
+        <button value="like" onClick={this.handleClick.bind(this)}>
+          +
+        </button>
+        <button value="dislike" onClick={this.handleClick.bind(this)}>
+          -
+        </button>
       </div>
     )
   }
