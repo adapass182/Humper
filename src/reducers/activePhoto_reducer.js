@@ -13,7 +13,10 @@ export default (state = [], { type, payload } = {}) => {
 img_001 {
   id: #001
   breed: breed
+    reducers
+
   linkToImg:
+     master
 }
 
 */
