@@ -1,5 +1,5 @@
+import activePhoto from './activePhoto_reducer'
 
-
-
-
-export default {}
+export default {
+  activePhoto
+}
