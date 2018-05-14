@@ -7,12 +7,13 @@ export const LIKE_DOG = 'LIKE_DOG'
 export const DISLIKE_DOG = 'DISLIKE_DOG'
 
 export const getDog = () => (dispatch) => {
+  console.log('getDog called')
   request 
     .get(`${dogApiUrl}`)
     .then(response => dispatch({
       type: 'FETCHED_IMAGE',
       payload: {
-        img: response
+        img: response.body.message
       }
     }))
     .catch(err => alert(err))
@@ -21,21 +22,27 @@ export const getDog = () => (dispatch) => {
 export const rateDog = (opinion) => dispatch => {
   const { breed, type } = opinion
 
-  request
-    .get(`${dogApiUrl}`)
-    .then(response => dispatch(
-      switch (type) {
-        case 'like' :
-          {
-            type: LIKE_DOG,
-            payload: {
-              breed: breed
-            }
-          }
-        case 'dislike':
+  //request
+    //.get(`${dogApiUrl}`)
+    //.then(response => dispatch(
+      //switch (type) {
+        //case 'like' :
+          //{
+            //type: LIKE_DOG,
+            //payload: {
+              //breed: breed
+            //}
+          //}
+        //case 'dislike':
+          //{
+            //type: DISLIKE_DOG,
+            //payload: {
+              //breed: breed
+            //}
+          //}
 
-      }
-   ))
+      //}
+    //)).catch(err => alert(err))
   
 }
 
