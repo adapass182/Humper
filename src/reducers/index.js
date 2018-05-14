@@ -4,3 +4,4 @@ import fetchedImage from './fetchedImage_reducer'
 export default {
   likeDislike,
   fetchedImage
+}
