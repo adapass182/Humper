@@ -7,19 +7,24 @@ class Viewer extends PureComponent {
     this.props.getDog()
   }
 
-  handleClick() {
-    this.props.rateDog(this.props.activePhoto.breed, this.value)
+  handleLike() {
+    this.props.rateDog(this.props.activePhoto.breed, 'Like')
+    this.props.getDog()
+  }
+
+  handleDislike() {
+    this.props.rateDog(this.props.activePhoto.breed, 'Dislike')
     this.props.getDog()
   }
 
   render() {
     return (
       <div>
-        <img src={this.props.activePhoto.img} />
-        <button value="like" onClick={this.handleClick.bind(this)}>
+        <img src={this.props.activePhoto.img} alt="current dog" />
+        <button value="like" onClick={this.handleLike.bind(this)}>
           +
         </button>
-        <button value="dislike" onClick={this.handleClick.bind(this)}>
+        <button value="dislike" onClick={this.handleDislike.bind(this)}>
           -
         </button>
       </div>
