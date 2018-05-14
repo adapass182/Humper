@@ -20,14 +20,15 @@ class Viewer extends PureComponent {
   render() {
     return (
       <div>
+
         <img src={this.props.activePhoto.img} alt="current dog" />
-        <button value="like" onClick={this.handleLike.bind(this)}>
-          +
-        </button>
-        <button value="dislike" onClick={this.handleDislike.bind(this)}>
-          -
-        </button>
-      </div>
+        <div class="voteButtonContainer">
+          <button class="voteButton" id="dislikeButton" onClick={this.handleDislike.bind(this)}>No Like</button>
+          <button class="voteButton" id="likeButton" onClick={this.handleLike.bind(this)}>Like</button>
+        </div>
+
+
+
     )
   }
 }
