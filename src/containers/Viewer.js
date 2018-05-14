@@ -8,12 +8,12 @@ class Viewer extends PureComponent {
   }
 
   handleLike() {
-    this.props.rateDog(this.props.activePhoto.breed, 'Like')
+    this.props.rateDog(this.props.fetchedImage.breed, 'Like')
     this.props.getDog()
   }
 
   handleDislike() {
-    this.props.rateDog(this.props.activePhoto.breed, 'Dislike')
+    this.props.rateDog(this.props.fetchedImage.breed, 'Dislike')
     this.props.getDog()
   }
 
