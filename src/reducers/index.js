@@ -1,5 +1,7 @@
-import activePhoto from './activePhoto_reducer'
+import likeDislike from './likeDislikeDog_reducer'
+import fetchedImage from './fetchedImage_reducer'
 
 export default {
-  activePhoto
+  likeDislike,
+  fetchedImage
 }

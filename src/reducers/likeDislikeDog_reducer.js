@@ -1,13 +1,13 @@
 export default (state = 0, { type, payload }) => {
   switch (type) {
-  case 'LIKE_PHOTO':
+  case 'LIKE_DOG':
   //NOTE: Payload needs to add new key:value to store if no record of this breed exists for this user.
   //      If breed already exists, needs to increment rating value.
     return {
       ...state,
 
     }
-  case 'DISLIKE_PHOTO':
+  case 'DISLIKE_DOG':
   //NOTE: Payload needs to add new key:value to store if no record of this breed exists for this user.
   //      If breed already exists, needs to decrement rating value.
     return state.concat(payload)
@@ -16,10 +16,10 @@ export default (state = 0, { type, payload }) => {
   }
 }
 
-
+/*
 Mockup:
 
-export default (state, { type, payload }) => {
+    (state, { type, payload }) => {
   switch (type) {
     case 'LIKE_PHOTO':
       return {
@@ -71,3 +71,5 @@ usersMockup  {
     }
   }
 }
+
+*/
