@@ -1,17 +1,14 @@
-export default (state = 0, { type, payload }) => {
-  switch (type) {
-  case 'LIKE_DOG':
-  //NOTE: Payload needs to add new key:value to store if no record of this breed exists for this user.
-  //      If breed already exists, needs to increment rating value.
-    return {
-      ...state,
+import { LIKE_DOG, DISLIKE_DOG } from '../actions/rateDog'
 
-    }
-  case 'DISLIKE_DOG':
-  //NOTE: Payload needs to add new key:value to store if no record of this breed exists for this user.
-  //      If breed already exists, needs to decrement rating value.
-    return state.concat(payload)
-  default:
-    return state
+export default (state = [], { type, payload }) => {
+  switch (type) {
+    case LIKE_DOG:
+      console.log('Like Dog payload: ', payload)
+      return [...state, payload]
+    case DISLIKE_DOG:
+      console.log('Dislike Dog payload: ', payload)
+      return [...state, payload]
+    default:
+      return [...state]
   }
 }
