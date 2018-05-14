@@ -16,6 +16,7 @@ export default (state = 0, { type, payload }) => {
   }
 }
 
+<<<<<<< HEAD:src/reducers/likeDislikeDog_reducer.js
 /*
 Mockup:
 
@@ -73,3 +74,6 @@ usersMockup  {
 }
 
 */
+=======
+
+>>>>>>> 85dc534eae4e7aed7365272d86d9622e13dac5dd:src/reducers/likeDislikePhoto_reducer.js

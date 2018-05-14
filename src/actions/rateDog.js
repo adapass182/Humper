@@ -20,11 +20,13 @@ export const getDog = () => (dispatch) => {
 }
 
 export const rateDog = (breed, opinion) => dispatch => {
-  const likeOrDislike = ( (opinion) === 'like' ? LIKE_DOG : DISLIKE_DOG )
+  const likeOrDislike = (opinion) === 'Like' ? LIKE_DOG : DISLIKE_DOG 
+  const val = ( (opinion) === 'Like' ? 1 : -1 )
   dispatch({
     type: likeOrDislike,
     payload: {
-      breed
+      breed,
+      val
     }
   })
 }
