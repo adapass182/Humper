@@ -1,6 +1,6 @@
 export default (state = [], { type, payload } = {}) => {
   switch (type) {
-  case `ACTIVE_PHOTO`:
+  case `FETCHED_IMAGE`:
     return payload
   default:
     return state
@@ -13,6 +13,10 @@ export default (state = [], { type, payload } = {}) => {
 img_001 {
   id: #001
   breed: breed
+    reducers
+
+  linkToImg:
+     master
 }
 
 */
