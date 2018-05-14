@@ -15,5 +15,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/adapass182/Humper.git",
+  "author": "Lennart <lwijers@gmail.com>",
+  "license": "MIT"
 }
