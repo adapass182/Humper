@@ -6,3 +6,12 @@ export default (state = [], { type, payload } = {}) => {
     return state
   }
 }
+
+
+/* State shape:
+
+img_001 {
+  id: #001
+  breed: breed
+  linkToImg: 
+}
