@@ -20,21 +20,28 @@ class Viewer extends PureComponent {
   render() {
     return (
       <div>
-
-        <img src={this.props.activePhoto.img} alt="current dog" />
-        <div class="voteButtonContainer">
-          <button class="voteButton" id="dislikeButton" onClick={this.handleDislike.bind(this)}>No Like</button>
-          <button class="voteButton" id="likeButton" onClick={this.handleLike.bind(this)}>Like</button>
+        <img src={this.props.fetchedImage.img} alt="current dog" />
+        <div className="voteButtonContainer">
+          <button
+            className="voteButton"
+            id="dislikeButton"
+            onClick={this.handleDislike.bind(this)}>
+            No Like
+          </button>
+          <button
+            className="voteButton"
+            id="likeButton"
+            onClick={this.handleLike.bind(this)}>
+            Like
+          </button>
         </div>
-
-
-
+      </div>
     )
   }
 }
 
-function mapStateToProps({ activePhoto }) {
-  return { activePhoto }
+function mapStateToProps({ fetchedImage }) {
+  return { fetchedImage }
 }
 
 export default connect(mapStateToProps, { getDog, rateDog })(Viewer)
